@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxe Vision - Premium Eyewear</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+:root {
+--primary-color: #1a1a1a;
+--secondary-color: #f8f8f8;
+--accent-color: #c9a96e;
+--text-primary: #1a1a1a;
+--text-secondary: #666;
+--white: #ffffff;
+}
+body {
+font-family: 'Inter', sans-serif;
+line-height: 1.6;
+color: var(--text-primary);
+background: var(--white);
+overflow-x: hidden;
+}
+.font-display {
+font-family: 'Playfair Display', serif;
+}
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+padding: 1rem 2rem;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+.navbar.transparent {
+background: rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.nav-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1400px;
+margin: 0 auto;
+}
+.logo {
+font-family: "",serif;
+font-size: 1.8rem;
+color: var(--accent-color);
+text-decoration: none;
+transition: all 0.3s ease;
+}
+.navbar.transparent .logo {
+color: var(--white);
+text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.nav-links {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+.nav-links a {
+text-decoration: none;
+color: var(--text-primary);
+font-weight: 500;
+transition: all 0.3s ease;
+position: relative;
+}
+.navbar.transparent .nav-links a {
+color: var(--white);
+text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+.nav-links a:hover {
+color: var(--accent-color);
+}
+.navbar.transparent .nav-links a:hover {
+color: var(--accent-color);
+}
+.nav-links a::after {
+content: '';
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--accent-color);
+transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+width: 100%;
+}
+.hero {
+height: 100vh;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(201,169,110,0.3)),
+url('https://readdy.ai/api/search-image?query=luxury%20eyewear%20collection%20displayed%20in%20sophisticated%20showroom%20with%20dramatic%20cinematic%20lighting%2C%20premium%20glasses%20with%20elegant%20reflections%2C%20modern%20architecture%20background%2C%20high-end%20fashion%20photography%20with%20depth%20and%20atmosphere&width=1920&height=1080&seq=hero2&orientation=landscape') center/cover;
+overflow: hidden;
+}
+.hero::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: radial-gradient(ellipse at center, transparent 20%, rgba(0,0,0,0.3) 70%);
+z-index: 1;
+}
+.hero::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(45deg, rgba(201,169,110,0.1) 0%, transparent 50%, rgba(201,169,110,0.1) 100%);
+z-index: 1;
+animation: shimmer 3s ease-in-out infinite alternate;
+}
+.hero-content {
+text-align: center;
+color: var(--white);
+max-width: 900px;
+padding: 0 2rem;
+position: relative;
+z-index: 2;
+animation: heroEntrance 2s ease-out;
+}
+.hero h1 {
+font-size: 5.5rem;
+font-weight: 200;
+margin-bottom: 1.5rem;
+letter-spacing: 3px;
+line-height: 1.1;
+text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 50%, #c9a96e 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 200% 200%;
+animation: gradientShift 4s ease-in-out infinite alternate;
+}
+.hero h1 .highlight {
+display: block;
+font-style: italic;
+color: var(--accent-color);
+font-weight: 300;
+text-shadow: 0 2px 10px rgba(201,169,110,0.5);
+-webkit-text-fill-color: var(--accent-color);
+}
+.hero p {
+font-size: 1.4rem;
+margin-bottom: 3rem;
+opacity: 0.95;
+max-width: 700px;
+margin-left: auto;
+margin-right: auto;
+text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+line-height: 1.6;
+}
+.hero-features {
+display: flex;
+justify-content: center;
+gap: 3rem;
+margin: 2rem 0 3rem;
+flex-wrap: wrap;
+}
+.hero-feature {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+font-size: 0.9rem;
+opacity: 0.9;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.hero-feature i {
+color: var(--accent-color);
+font-size: 1.2rem;
+}
+.btn-primary {
+display: inline-block;
+padding: 1.2rem 3rem;
+background: linear-gradient(135deg, var(--accent-color) 0%, #d4b876 100%);
+color: var(--white);
+text-decoration: none;
+border-radius: 50px;
+font-weight: 500;
+letter-spacing: 1px;
+transition: all 0.4s ease;
+border: 2px solid var(--accent-color);
+position: relative;
+overflow: hidden;
+text-transform: uppercase;
+font-size: 0.9rem;
+box-shadow: 0 8px 25px rgba(201, 169, 110, 0.3);
+animation: float 3s ease-in-out infinite;
+}
+.btn-primary::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+transition: left 0.5s ease;
+}
+.btn-primary:hover::before {
+left: 100%;
+}
+.btn-primary:hover {
+background: linear-gradient(135deg, #d4b876 0%, var(--accent-color) 100%);
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 15px 40px rgba(201, 169, 110, 0.4);
+}
+.section {
+padding: 6rem 2rem;
+max-width: 1400px;
+margin: 0 auto;
+}
+.vision {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
+}
+.vision-content h2 {
+font-size: 3rem;
+margin-bottom: 2rem;
+color: var(--primary-color);
+}
+.vision-content p {
+font-size: 1.1rem;
+color: var(--text-secondary);
+margin-bottom: 1.5rem;
+}
+.vision-image {
+position: relative;
+height: 500px;
+border-radius: 20px;
+overflow: hidden;
+background: url('https://readdy.ai/api/search-image?query=elegant%20eyewear%20frames%20displayed%20on%20luxurious%20velvet%20surface%20with%20soft%20studio%20lighting%2C%20premium%20craftsmanship%20details%2C%20sophisticated%20product%20photography%2C%20artistic%20composition&width=600&height=500&seq=vision1&orientation=portrait') center/cover;
+}
+.craftsmanship {
+text-align: center;
+background: var(--secondary-color);
+margin: 0 -2rem;
+padding: 6rem 2rem;
+}
+.craftsmanship h2 {
+font-size: 3rem;
+margin-bottom: 3rem;
+color: var(--primary-color);
+}
+.craft-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+.craft-item {
+background: var(--white);
+border-radius: 20px;
+padding: 2rem;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+.craft-item:hover {
+transform: translateY(-10px);
+}
+.craft-item img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+border-radius: 15px;
+margin-bottom: 1.5rem;
+}
+.craft-item h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: var(--primary-color);
+}
+.materials {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+align-items: center;
+}
+.materials-content h2 {
+font-size: 3rem;
+margin-bottom: 2rem;
+color: var(--primary-color);
+}
+.material-list {
+list-style: none;
+}
+.material-item {
+padding: 1rem 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.material-item:hover {
+color: var(--accent-color);
+padding-left: 1rem;
+}
+.material-item h4 {
+font-size: 1.2rem;
+margin-bottom: 0.5rem;
+}
+.materials-showcase {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+height: 500px;
+}
+.material-image {
+border-radius: 15px;
+overflow: hidden;
+transition: transform 0.3s ease;
+}
+.material-image:hover {
+transform: scale(1.05);
+}
+.material-image.large {
+grid-row: span 2;
+background: url('https://readdy.ai/api/search-image?query=premium%20titanium%20eyewear%20frame%20close-up%20showing%20intricate%20details%20and%20craftsmanship%2C%20luxury%20materials%20texture%2C%20professional%20macro%20photography&width=400&height=500&seq=material1&orientation=portrait') center/cover;
+}
+.material-image.small-1 {
+background: url('https://readdy.ai/api/search-image?query=acetate%20eyewear%20material%20samples%20with%20rich%20colors%20and%20patterns%2C%20luxury%20eyewear%20manufacturing%2C%20premium%20materials%20close-up&width=400&height=240&seq=material2&orientation=landscape') center/cover;
+}
+.material-image.small-2 {
+background: url('https://readdy.ai/api/search-image?query=gold%20plated%20eyewear%20hinges%20and%20hardware%20details%2C%20luxury%20eyewear%20components%2C%20premium%20craftsmanship%20macro%20photography&width=400&height=240&seq=material3&orientation=landscape') center/cover;
+}
+.collections-hero {
+height: 60vh;
+background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(201,169,110,0.3)),
+url('https://readdy.ai/api/search-image?query=luxury%20eyewear%20collection%20display%20in%20elegant%20showroom%20with%20sophisticated%20lighting%2C%20premium%20eyeglasses%20arranged%20artistically%2C%20high-end%20retail%20environment&width=1920&height=600&seq=collections1&orientation=landscape') center/cover;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--white);
+text-align: center;
+}
+.collections-hero h1 {
+font-size: 3.5rem;
+margin-bottom: 1rem;
+}
+.collections-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+gap: 2rem;
+margin-top: 3rem;
+}
+.collection-card {
+background: var(--white);
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+cursor: pointer;
+}
+.collection-card:hover {
+transform: translateY(-15px) rotateX(5deg);
+box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+.collection-image {
+height: 300px;
+position: relative;
+overflow: hidden;
+}
+.collection-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.collection-card:hover .collection-image img {
+transform: scale(1.1);
+}
+.collection-info {
+padding: 2rem;
+}
+.collection-info h3 {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+color: var(--primary-color);
+}
+.collection-info p {
+color: var(--text-secondary);
+margin-bottom: 1.5rem;
+}
+.price {
+font-size: 1.3rem;
+font-weight: 600;
+color: var(--accent-color);
+}
+.contact {
+background: var(--secondary-color);
+margin: 0 -2rem;
+padding: 6rem 2rem;
+}
+.contact-container {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 4rem;
+}
+.contact-info h2 {
+font-size: 3rem;
+margin-bottom: 2rem;
+color: var(--primary-color);
+}
+.contact-details {
+margin-bottom: 3rem;
+}
+.contact-item {
+display: flex;
+align-items: center;
+margin-bottom: 1.5rem;
+gap: 1rem;
+}
+.contact-item i {
+width: 50px;
+height: 50px;
+background: var(--accent-color);
+color: var(--white);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.social-links {
+display: flex;
+gap: 1rem;
+}
+.social-link {
+width: 50px;
+height: 50px;
+background: var(--primary-color);
+color: var(--white);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+.social-link:hover {
+background: var(--accent-color);
+transform: translateY(-3px);
+}
+.contact-form {
+background: var(--white);
+padding: 3rem;
+border-radius: 20px;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+margin-bottom: 2rem;
+position: relative;
+}
+.form-group input,
+.form-group textarea {
+width: 100%;
+padding: 1rem 0;
+border: none;
+border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+background: transparent;
+font-size: 1rem;
+transition: border-color 0.3s ease;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+outline: none;
+border-bottom-color: var(--accent-color);
+}
+.form-group label {
+position: absolute;
+top: 1rem;
+left: 0;
+color: var(--text-secondary);
+transition: all 0.3s ease;
+pointer-events: none;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+top: -0.5rem;
+font-size: 0.8rem;
+color: var(--accent-color);
+}
+.btn-submit {
+width: 100%;
+padding: 1rem;
+background: var(--accent-color);
+color: var(--white);
+border: none;
+border-radius: 50px;
+font-size: 1rem;
+font-weight: 500;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.btn-submit:hover {
+background: var(--primary-color);
+transform: translateY(-2px);
+}
+.map-container {
+height: 300px;
+border-radius: 15px;
+overflow: hidden;
+margin-top: 2rem;
+background: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png') center/cover;
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(50px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes heroEntrance {
+0% {
+opacity: 0;
+transform: translateY(80px) scale(0.8);
+}
+50% {
+opacity: 0.8;
+transform: translateY(20px) scale(0.95);
+}
+100% {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
+}
+@keyframes gradientShift {
+0% {
+background-position: 0% 50%;
+}
+100% {
+background-position: 100% 50%;
+}
+}
+@keyframes shimmer {
+0% {
+opacity: 0.1;
+}
+100% {
+opacity: 0.3;
+}
+}
+@keyframes float {
+0%, 100% {
+transform: translateY(0);
+}
+50% {
+transform: translateY(-10px);
+}
+}
+.fade-in {
+opacity: 0;
+transform: translateY(50px);
+transition: all 1s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+@media (max-width: 768px) {
+.hero h1 {
+font-size: 3rem;
+letter-spacing: 1px;
+}
+.hero p {
+font-size: 1.1rem;
+}
+.hero-features {
+gap: 1.5rem;
+}
+.hero-feature {
+font-size: 0.8rem;
+}
+.vision,
+.materials,
+.contact-container {
+grid-template-columns: 1fr;
+gap: 2rem;
+}
+.nav-links {
+display: none;
+}
+.section {
+padding: 4rem 1rem;
+}
+.craftsmanship,
+.contact {
+margin: 0 -1rem;
+padding: 4rem 1rem;
+}
+}
+</style>
+</head>
+<body>
+<nav class="navbar transparent" id="navbar">
+<div class="nav-container">
+<a href="#" class="logo">Luxe Vision</a>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#vision">Vision</a></li>
+<li><a href="#craftsmanship">Craftsmanship</a></li>
+<li><a href="#materials">Materials</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+<section id="home" class="hero">
+<div class="hero-content">
+<h1 class="font-display">Visionary <span class="highlight">Elegance</span></h1>
+<p>Crafting extraordinary eyewear that transforms vision into art, where precision meets luxury in every frame. Experience the perfect fusion of Italian craftsmanship and modern innovation.</p>
+<div class="hero-features">
+<div class="hero-feature">
+<i class="ri-award-line"></i>
+<span>Handcrafted Excellence</span>
+</div>
+<div class="hero-feature">
+<i class="ri-star-line"></i>
+<span>Premium Materials</span>
+</div>
+<div class="hero-feature">
+<i class="ri-eye-line"></i>
+<span>Perfect Vision</span>
+</div>
+</div>
+<a href="#vision" class="btn-primary">Explore Collection</a>
+</div>
+</section>
+<section id="vision" class="section">
+<div class="vision fade-in">
+<div class="vision-content">
+<h2 class="font-display">Our Vision</h2>
+<p>At Luxe Vision, we believe that eyewear is more than a necessity—it's an expression of individuality, a statement of sophistication, and a testament to impeccable taste.</p>
+<p>Each frame is meticulously designed by master artisans who understand that true luxury lies in the perfect balance of form, function, and uncompromising quality.</p>
+<p>We don't just create eyewear; we craft heirlooms that enhance your vision while reflecting your unique style and personality.</p>
+</div>
+<div class="vision-image"></div>
+</div>
+</section>
+<section id="craftsmanship" class="craftsmanship">
+<div class="section">
+<h2 class="font-display fade-in">Masterful Craftsmanship</h2>
+<p class="fade-in">Every pair of Luxe Vision eyewear represents hundreds of hours of meticulous handwork, combining traditional techniques with cutting-edge innovation.</p>
+<div class="craft-grid">
+<div class="craft-item fade-in">
+<img src="https://readdy.ai/api/search-image?query=skilled%20artisan%20hands%20crafting%20luxury%20eyewear%20frames%20with%20precision%20tools%2C%20traditional%20craftsmanship%20workshop%2C%20detailed%20handwork%20process%2C%20premium%20manufacturing&width=300&height=250&seq=craft1&orientation=landscape" alt="Precision Engineering">
+<h3>Precision Engineering</h3>
+<p>Each component is engineered to perfection, ensuring optimal fit, comfort, and durability that lasts a lifetime.</p>
+</div>
+<div class="craft-item fade-in">
+<img src="https://readdy.ai/api/search-image?query=luxury%20eyewear%20frame%20being%20hand-polished%20to%20perfection%2C%20artisan%20workshop%20environment%2C%20premium%20finishing%20process%2C%20detailed%20craftsmanship&width=300&height=250&seq=craft2&orientation=landscape" alt="Hand-Finished Details">
+<h3>Hand-Finished Details</h3>
+<p>Every surface is hand-polished and refined by master craftsmen who take pride in delivering flawless results.</p>
+</div>
+<div class="craft-item fade-in">
+<img src="https://readdy.ai/api/search-image?query=quality%20control%20inspection%20of%20luxury%20eyewear%20frames%20under%20magnification%2C%20precision%20testing%20equipment%2C%20premium%20quality%20assurance%20process&width=300&height=250&seq=craft3&orientation=landscape" alt="Quality Assurance">
+<h3>Quality Assurance</h3>
+<p>Rigorous testing and inspection ensure that every frame meets our exacting standards before reaching you.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="materials" class="section">
+<div class="materials fade-in">
+<div class="materials-content">
+<h2 class="font-display">Premium Materials</h2>
+<p>We source only the finest materials from around the world, each selected for its exceptional properties and aesthetic appeal.</p>
+<ul class="material-list">
+<li class="material-item">
+<h4>Japanese Titanium</h4>
+<p>Ultra-lightweight and hypoallergenic, providing unmatched comfort and durability.</p>
+</li>
+<li class="material-item">
+<h4>Italian Acetate</h4>
+<p>Rich, vibrant colors and patterns that showcase the natural beauty of cellulose acetate.</p>
+</li>
+<li class="material-item">
+<h4>Swiss Gold Plating</h4>
+<p>24-karat gold accents that add a touch of luxury and ensure lasting brilliance.</p>
+</li>
+<li class="material-item">
+<h4>German Crystal Lenses</h4>
+<p>Precision-cut optical lenses that provide crystal-clear vision and UV protection.</p>
+</li>
+</ul>
+</div>
+<div class="materials-showcase">
+<div class="material-image large"></div>
+<div class="material-image small-1"></div>
+<div class="material-image small-2"></div>
+</div>
+</div>
+</section>
+<script id="navbar-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+navbar.classList.remove('transparent');
+} else {
+navbar.classList.add('transparent');
+}
+});
+});
+</script>
+<script id="smooth-scroll">
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('a[href^="#"]');
+links.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if (target) {
+target.scrollIntoView({
+behavior: 'smooth',
+block: 'start'
+});
+}
+});
+});
+});
+</script>
+<script id="fade-in-animation">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => {
+observer.observe(el);
+});
+});
+</script>
+<script id="material-hover-effects">
+document.addEventListener('DOMContentLoaded', function() {
+const materialItems = document.querySelectorAll('.material-item');
+const materialImages = document.querySelectorAll('.material-image');
+materialItems.forEach((item, index) => {
+item.addEventListener('mouseenter', function() {
+materialImages.forEach(img => img.style.opacity = '0.3');
+if (materialImages[index]) {
+materialImages[index].style.opacity = '1';
+materialImages[index].style.transform = 'scale(1.05)';
+}
+});
+item.addEventListener('mouseleave', function() {
+materialImages.forEach(img => {
+img.style.opacity = '1';
+img.style.transform = 'scale(1)';
+});
+});
+});
+});
+</script>
+<section id="collections" class="section">
+<div class="collections fade-in">
+<h2 class="font-display" style="text-align: center; font-size: 3rem; margin-bottom: 3rem; color: var(--primary-color);">Our Latest Collections</h2>
+<p style="text-align: center; font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">Discover our newest designs that blend timeless elegance with contemporary innovation, each piece carefully crafted to make a statement.</p>
+<div class="collections-grid">
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=luxury%20aviator%20sunglasses%20with%20gold%20frames%20and%20premium%20lenses%20on%20elegant%20marble%20surface%2C%20high-end%20eyewear%20photography%2C%20sophisticated%20lighting%2C%20professional%20product%20shot&width=350&height=300&seq=collection1&orientation=landscape" alt="Aviator Elite Collection">
+</div>
+<div class="collection-info">
+<h3>Aviator Elite</h3>
+<p>Classic aviator design reimagined with premium titanium construction and polarized crystal lenses.</p>
+<div class="price">From $899</div>
+</div>
+</div>
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=modern%20rectangular%20eyeglasses%20with%20acetate%20frames%20in%20rich%20tortoiseshell%20pattern%2C%20luxury%20optical%20eyewear%2C%20premium%20materials%2C%20elegant%20product%20photography&width=350&height=300&seq=collection2&orientation=landscape" alt="Metropolitan Series">
+</div>
+<div class="collection-info">
+<h3>Metropolitan</h3>
+<p>Bold rectangular frames crafted from Italian acetate with subtle gold accents for the modern professional.</p>
+<div class="price">From $749</div>
+</div>
+</div>
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=vintage%20round%20eyeglasses%20with%20thin%20metal%20frames%20and%20crystal%20clear%20lenses%2C%20retro%20inspired%20luxury%20eyewear%2C%20premium%20optical%20design%2C%20sophisticated%20product%20photography&width=350&height=300&seq=collection3&orientation=landscape" alt="Vintage Luxe">
+</div>
+<div class="collection-info">
+<h3>Vintage Luxe</h3>
+<p>Timeless round frames inspired by vintage designs, featuring Swiss precision engineering and crystal lenses.</p>
+<div class="price">From $649</div>
+</div>
+</div>
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=oversized%20cat-eye%20sunglasses%20with%20gradient%20lenses%20and%20elegant%20feminine%20design%2C%20luxury%20women%20eyewear%2C%20premium%20fashion%20accessory%2C%20stylish%20product%20photography&width=350&height=300&seq=collection4&orientation=landscape" alt="Feminine Grace">
+</div>
+<div class="collection-info">
+<h3>Feminine Grace</h3>
+<p>Elegant cat-eye silhouettes with delicate detailing and gradient lenses that complement every face shape.</p>
+<div class="price">From $799</div>
+</div>
+</div>
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=sporty%20wraparound%20sunglasses%20with%20performance%20lenses%20and%20lightweight%20titanium%20construction%2C%20athletic%20luxury%20eyewear%2C%20premium%20sports%20design&width=350&height=300&seq=collection5&orientation=landscape" alt="Performance Pro">
+</div>
+<div class="collection-info">
+<h3>Performance Pro</h3>
+<p>High-performance frames designed for active lifestyles, combining cutting-edge technology with luxury aesthetics.</p>
+<div class="price">From $959</div>
+</div>
+</div>
+<div class="collection-card fade-in">
+<div class="collection-image">
+<img src="https://readdy.ai/api/search-image?query=minimalist%20square%20eyeglasses%20with%20ultra-thin%20metal%20frames%20and%20clean%20geometric%20lines%2C%20contemporary%20luxury%20optical%20design%2C%20modern%20eyewear%20photography&width=350&height=300&seq=collection6&orientation=landscape" alt="Minimalist Edge">
+</div>
+<div class="collection-info">
+<h3>Minimalist Edge</h3>
+<p>Clean, geometric lines define this ultra-modern collection, featuring featherweight construction and premium optics.</p>
+<div class="price">From $699</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact" class="contact">
+<div class="contact-container">
+<div class="contact-info fade-in">
+<h2 class="font-display">Get in Touch</h2>
+<p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 3rem;">Experience the luxury of personalized service. Visit our flagship boutique or reach out to our experts for a consultation.</p>
+<div class="contact-details">
+<div class="contact-item">
+<i class="ri-map-pin-line"></i>
+<div>
+<h4>Flagship Boutique</h4>
+<p>Madison Avenue, New York, NY 10075</p>
+</div>
+</div>
+<div class="contact-item">
+<i class="ri-phone-line"></i>
+<div>
+<h4>Phone</h4>
+<p>+1 (555) 123-LUXE</p>
+</div>
+</div>
+<div class="contact-item">
+<i class="ri-mail-line"></i>
+<div>
+<h4>Email</h4>
+<p>concierge@luxevision.com</p>
+</div>
+</div>
+<div class="contact-item">
+<i class="ri-time-line"></i>
+<div>
+<h4>Hours</h4>
+<p>Mon - Sat: 10AM - 8PM<br>Sunday: 12PM - 6PM</p>
+</div>
+</div>
+</div>
+<div class="social-links">
+<a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+<a href="#" class="social-link"><i class="ri-facebook-line"></i></a>
+<a href="#" class="social-link"><i class="ri-twitter-line"></i></a>
+<a href="#" class="social-link"><i class="ri-linkedin-line"></i></a>
+</div>
+<div class="map-container"></div>
+</div>
+<div class="contact-form fade-in">
+<h3 style="font-size: 2rem; margin-bottom: 2rem; color: var(--primary-color);">Schedule a Consultation</h3>
+<form id="consultationForm">
+<div class="form-group">
+<input type="text" name="name" required placeholder=" ">
+<label>Full Name</label>
+</div>
+<div class="form-group">
+<input type="email" name="email" required placeholder=" ">
+<label>Email Address</label>
+</div>
+<div class="form-group">
+<input type="tel" name="phone" placeholder=" ">
+<label>Phone Number</label>
+</div>
+<div class="form-group">
+<select name="service" required style="width: 100%; padding: 1rem 0; border: none; border-bottom: 2px solid rgba(0, 0, 0, 0.1); background: transparent; font-size: 1rem;">
+<option value="">Select Service</option>
+<option value="eye-exam">Comprehensive Eye Exam</option>
+<option value="frame-fitting">Frame Fitting & Styling</option>
+<option value="custom-design">Custom Design Consultation</option>
+<option value="lens-upgrade">Lens Technology Upgrade</option>
+<option value="repair-service">Repair & Maintenance</option>
+</select>
+</div>
+<div class="form-group">
+<textarea name="message" rows="4" placeholder=" "></textarea>
+<label>Additional Details</label>
+</div>
+<button type="submit" class="btn-submit">Book Consultation</button>
+</form>
+</div>
+</div>
+</section>
+<footer style="background: var(--primary-color); color: var(--white); padding: 4rem 2rem 2rem;">
+<div style="max-width: 1400px; margin: 0 auto;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+<div>
+<h3 class="logo" style="color: var(--accent-color); margin-bottom: 1.5rem;">Luxe Vision</h3>
+<p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">Crafting extraordinary eyewear that transforms vision into art, where precision meets luxury in every frame.</p>
+<div class="social-links">
+<a href="#" class="social-link" style="background: var(--accent-color);"><i class="ri-instagram-line"></i></a>
+<a href="#" class="social-link" style="background: var(--accent-color);"><i class="ri-facebook-line"></i></a>
+<a href="#" class="social-link" style="background: var(--accent-color);"><i class="ri-twitter-line"></i></a>
+<a href="#" class="social-link" style="background: var(--accent-color);"><i class="ri-linkedin-line"></i></a>
+</div>
+</div>
+<div>
+<h4 style="margin-bottom: 1.5rem; color: var(--accent-color);">Collections</h4>
+<ul style="list-style: none;">
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Aviator Elite</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Metropolitan</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Vintage Luxe</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Feminine Grace</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Performance Pro</a></li>
+</ul>
+</div>
+<div>
+<h4 style="margin-bottom: 1.5rem; color: var(--accent-color);">Services</h4>
+<ul style="list-style: none;">
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Eye Examinations</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Custom Fitting</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Lens Technology</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Repair Services</a></li>
+<li style="margin-bottom: 0.8rem;"><a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: color 0.3s ease;">Virtual Try-On</a></li>
+</ul>
+</div>
+<div>
+<h4 style="margin-bottom: 1.5rem; color: var(--accent-color);">Contact Info</h4>
+<div style="color: rgba(255, 255, 255, 0.8);">
+<p style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="ri-map-pin-line"></i> Madison Avenue, New York</p>
+<p style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="ri-phone-line"></i> +1 (555) 123-LUXE</p>
+<p style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;"><i class="ri-mail-line"></i> concierge@luxevision.com</p>
+</div>
+</div>
+</div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+<p style="color: rgba(255, 255, 255, 0.6);">&copy; 2025 Luxe Vision. All rights reserved.</p>
+<div style="display: flex; gap: 2rem;">
+<a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+<a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
+<a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; font-size: 0.9rem;">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="form-submission">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.getElementById('consultationForm');
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+const submitBtn = this.querySelector('.btn-submit');
+const originalText = submitBtn.textContent;
+submitBtn.textContent = 'Booking...';
+submitBtn.disabled = true;
+setTimeout(() => {
+submitBtn.textContent = 'Consultation Booked!';
+submitBtn.style.background = '#28a745';
+setTimeout(() => {
+submitBtn.textContent = originalText;
+submitBtn.style.background = 'var(--accent-color)';
+submitBtn.disabled = false;
+form.reset();
+}, 2000);
+}, 1500);
+});
+});
+</script>
+<script id="footer-link-hover">
+document.addEventListener('DOMContentLoaded', function() {
+const footerLinks = document.querySelectorAll('footer a');
+footerLinks.forEach(link => {
+link.addEventListener('mouseenter', function() {
+this.style.color = 'var(--accent-color)';
+});
+link.addEventListener('mouseleave', function() {
+this.style.color = 'rgba(255, 255, 255, 0.8)';
+});
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_t9tkQZJiyi2ps9zUYm8TDsL6qXo4YmZx0Ot5rBlAlEd', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    
+</script>
+
+</body>
+</html>
